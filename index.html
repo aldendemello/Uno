@@ -1,0 +1,125 @@
+<!--
+
+This website was made to assist players using our game UNO for Python!
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UNO in Python!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="favicon-16x16.png"/>
+    <link rel="stylesheet" href="master.css">
+</head>
+
+<body>
+    <div class="container-fluid mh-110">
+        <br>
+        <h1><img src="uno-logo.png" alt="" draggable="false"></h1>
+        <div class="uno-rules">
+            <div class="row">
+                <div class="col-4">
+                    <nav id="menuScroll">
+                        <ul class="nav nav-pills flex-column">
+                            <a href="#" class="nav-link" id='nav-menu'>MENU</a>
+                            <a href="#content-info" class="nav-link">Information</a>
+                            <a class="nav-link" href="#content-setup">Setup</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#content-gameplay">Gameplay</a>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#content-note">Note</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#content-action-cards">Cards</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#content-reverse">Reverse Card</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#content-skip">Skip Card</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#content-draw-two">Draw Two Card</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#content-wild">Wild Card</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#content-wild-draw-four">Wild Draw Four Card</a>
+                                </li>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-8">
+                    <div data-spy="scroll" data-target="#menuScroll" data-offset="10" style="height:100vh;overflow-y: scroll;padding:30px">
+                        <h4 id="content-info">Information</h2>
+                            <p>Text-based game of the famous card game UNO built in Python! <br> Built by Alden DeMello and Sebastian Deluca!</p>
+
+                        <h4 id="content-setup">Setup</h2>
+                        <p>The game is played between you and the computer. You and the computer both start with seven cards, and they are dealt to each individual hand. The rest of the cards are placed in a Draw Pile. A random card must be drawn from the Draw Pile and then the game can begin! <p style='font-weight:bold'><br> IF PYTHON 3.4.4 IS ALREADY INSTALLED, SKIP TO STEP # 3 <br><br>
+	1. Open your internet browser (Internet Explorer, Chrome..)<br><br>
+	2. Download Python 3.4.4 <br><br>
+(https://www.python.org/downloads/release/python-344/) <br><br>
+	3. Once installed, launch Python IDLE.<br><br>
+	4. Go to File... Open... search for DeMello_Deluca_CA.py<br><br>
+	5. Click on Run followed by Run Module (or hit F5) and the game will begin. </p>
+</p>
+
+                        <h4 id="content-gameplay">Gameplay</h2>
+                        <p>The user begins playing by default. Every player views their cards and tries to match the card in the Discard Pile. You have to match either by the number, color, or the symbol/Action. For instance, if the Discard Pile has a red card that is an 8 you have to place either a red card or a card with an 8 on it. You can also play a Wild card (which can alter current color in play). If you or the computer has no matches or they choose not to play any of their cards even though they might have a match, they must draw a card from the Draw pile. If that card can be played, play it. Otherwise, the game moves on to the next person in turn. You can also play a Wild card, or a Wild Draw Four card on your turn.</p>
+
+                        <h4 id="content-note">Note</h4>
+                        <p>
+                            
+                           Regardless of what card the game starts off on, (ie. Plus 4, Plus 2) the player starts first and does not have to pick up any cards. In the case of a plus 4 starting off the game, the player is able to place any card in their hand.
+                        </p>
+
+                        <h4 id="content-action-cards">Cards</h4>
+                        <p>
+                             Our version of UNO’s cards have the same functions are the physical card game, however, they are displayed differently. All cards are displayed as ‘X#’, X meaning colour, and # meaning number. So, for example, a Red 5 will display as R5 in our game.
+
+                        </p>
+                        <h4 id="content-reverse">Reverse Card</h4>
+                        <p>
+                              If you or the computer plays a reverse card the turn returns back to the one playing the reverse card. It can only be played on a card that matches by color, or on another Reverse card. If turned up at the beginning of play, nothing happens and the game will continue and the user will start. This card is displayed as ‘Xr’, ‘X’ meaning colour, ‘r’ meaning reverse.
+
+                        </p>
+                        <h4 id="content-skip">Skip Card</h4>
+                        <p>
+                            When a player places this card, their opponent has to skip their turn. It can only be played on a card that matches by color, or on another Skip card. This card is displayed as ‘Xb’, ‘X’ meaning colour, ‘b’ meaning block. For example a Red Skip will display as ‘Rb’ in our game.
+
+                        </p>
+                        <h4 id="content-draw-two">Draw Two Card</h4>
+                        <p>
+                            
+                           When a player places this card, the next player will have to pick up two cards and forfeit their turn. It can only be played on a card that matches by color, or on another Draw Two. If turned up at the beginning of play, the game continues without anyone picking up cards and the user still begins by default. This card is displayed as ‘Xp’, ‘X’ meaning colour, ‘p’ meaning Plus. So, for example, a Yellow Draw Two will display as ‘Yp’ in our game.
+
+                        </p>
+                        <h4 id="content-wild">Wild Card</h4>
+                        <p>
+                             This card represents all four colors, and can be placed on any card. The player has to state which color it will represent for the next player. It can be played regardless of whether another card is available. This card is displayed as ‘Cx’, followed by a choice of 4 options ‘Rz’ ‘Gz’ ‘Yz’ ‘Bz’, each representing the colour, ‘z’ has no meaning but informs the player of the colour changed so it does not disrupt gameplay.
+
+                        </p>
+                        <h4 id="content-wild-draw-four">Wild Draw Four Card</h4>
+                        <p>
+                           Similar to the Wild Card, but the player it is played against has to pick up four cards. It is displayed as ‘P+’, which just symbolizes Plus Four. Once played, the opposing player will pick up four cards, and the player who played it gets to change the colour of the game. (Refer to ‘Wild Card’ for explanation of colour changing.)
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

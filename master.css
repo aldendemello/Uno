@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html,
+body {
+	height: 100%;
+}
+
+h1 {
+	background-color: rgba(235,241,241,0.5);
+	width: 60%;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	padding: 20px;
+	margin: auto;
+	margin-bottom: 20px;
+	
+}
+
+h1 span {
+	font-weight: 800;
+	color: rgba(248,219,34, 1);
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	background-color: red;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+img {
+	height: 100px;
+	width: 120px;
+}
+
+h2 {
+
+	font-family: 'Roboto', sans-serif;
+
+}
+p {
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	position: relative;
+}
+
+.scrollspy-example {
+	height: 360px;
+}
+
+.uno-rules {
+	background: rgba(255, 255, 255, 0.95);
+	margin-right: 0;
+	margin-left: 0;
+	margin: auto;
+	width: 80%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	opacity: 0.95;
+}
+
+.uno-rules .row .col {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.col-4 {
+	background: rgba(178,184,27, 0.75);
+}
+
+.col-4 a.nav-link {
+	font-family: 'Roboto', sans-serif;
+	color: black;
+	font-weight: 500;
+	text-align: center;
+}
+
+a#nav-menu {
+	font-weight: 800;
+}
+.container-fluid {
+	background: linear-gradient(rgba(52, 53, 52, 0.75), rgba(52, 53, 52, 0.75)), url(uno-bg.png);
+	min-height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
